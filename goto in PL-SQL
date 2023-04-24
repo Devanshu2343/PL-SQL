@@ -1,0 +1,19 @@
+declare
+num1 number(2);
+num2 number(2);
+begin
+num1 := :num1;
+num2 := :num2;
+if num1> num2 then
+goto p1;
+else
+goto p2;
+end if;
+<<p1>>
+dbms_output.put_line('num1 is bigger');
+goto p3 ;
+<<p2>>
+dbms_output.put_line('num2 is bigger');
+<<p3>>
+dbms_output.put_line('end of program');
+end;
