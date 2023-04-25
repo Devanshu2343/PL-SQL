@@ -1,0 +1,19 @@
+declare
+ n1 number(2);
+ n2 number(2);
+ great number(2);
+ procedure bigger(n1 in number,n2 in number, great out number)
+is
+begin
+ if n1>n2 then
+ great:=n1;
+ else
+ great:=n2;
+ end if;
+end bigger;
+begin
+ n1:=:n1;
+ n2:=:n2;
+ bigger(n1,n2,great);
+ dbms_output.put_line(great);
+end;
